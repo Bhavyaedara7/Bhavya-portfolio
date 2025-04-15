@@ -1,0 +1,99 @@
+:root {
+    --text-color: #333;
+    --font-family: "Maison Neue", sans-serif;
+}
+
+/* Default theme */
+body {
+    background: white;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    transition: background 0.4s ease, color 0.4s ease;
+    position: relative;
+}
+
+/* Light Sky Theme */
+body.light-theme {
+    background: linear-gradient(to top right, #ffe0f0, #ccf2ff);
+    color: #222;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background: linear-gradient(to top, #12121ecc 0%, #12121e99 30%, transparent 100%),
+                linear-gradient(180deg, #13111a, #303753 76%, #373053);
+    color: #fff;
+}
+
+body.dark-theme::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: transparent url("../assets/stars.png") repeat;
+    z-index: -1;
+    animation: twinkle 6s infinite;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+body.dark-theme::after {
+    content: "";
+    position: fixed;
+    bottom: 0; left: 0;
+    width: 100%; height: 60vh;
+    background-size: 300px;
+    animation: antennaMove 10s infinite linear;
+    opacity: 0.05;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes antennaMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 -200px; }
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.4; }
+}
+
+/* Theme Sidebar */
+.theme-sidebar {
+    position: fixed;
+    top: 50%;
+    right: -38px;
+    transform: translateY(-50%); 
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 999;
+}
+
+.theme-sidebar:hover {
+    right: 0;
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    margin: 5px 0;
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.theme-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.theme-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+  
