@@ -1,0 +1,256 @@
+#skills {
+    padding: 4rem 1rem;
+    text-align: center;
+    margin-top: 16px;
+}
+
+body.dark-theme .skills {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+.skills-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+/* Grid Responsive */
+.skills-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 0.6fr;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@media screen and (min-width: 900px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+        grid-auto-flow: row;
+        max-width: 1000px;
+        margin: 0 auto;
+        gap: 1.5rem;
+    }
+
+    .skill-card:nth-child(3) {
+        grid-column: 1 / 3;
+        justify-self: center; /* Centers the 3rd card under the two above */
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .skills-grid {
+    grid-template-columns: 1fr;
+    width: 300px; /* Locks width to screen width */
+    margin: 0 auto;
+    }
+
+    .skill-card {
+    max-width: 100%;
+    width: 100%;
+    }
+}
+
+/* Skill Card */
+.skill-card {
+    border-radius: 12px;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    width: 100%;
+    max-width: 480px;
+    margin: auto;
+}
+
+body.dark-theme .skill-card {
+    background-color: var(--card-bg-dark);
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    box-shadow: 0 0px 20px rgba(245, 244, 244,);
+}
+
+/* Section Heading */
+.skill-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 2px;
+}
+
+.skill-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #111;
+}
+
+.divider {
+    width: 80%;
+    height: 2px;
+    background-color: #333;
+    margin: 0 auto;
+}
+
+body.dark-theme .divider {
+    background-color: var(--text-dark);
+}
+
+/* Skill Row */
+.skill-item {
+    margin-bottom: 1.5rem;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skill-title-percent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+
+.skill-title {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.skill-percent {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 2px 10px;
+    font-size: 0.85rem;
+    font-weight:normal;
+    color: #333;
+}
+
+body.dark-theme .skill-percent {
+    background-color: var(--skill-percent-bg-dark);
+    border-color: #444;
+    color: #ddd;
+}
+
+/* Fixed-size skill bar */
+.skill-bar {
+    max-width: 320px;
+    height: 8px;
+    border-radius: 6px;
+    background-color: #eee;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+body.dark-theme .skill-bar {
+    background-color: var(--bar-bg-dark);
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: rgb(0, 89, 179); /* Same fill for all */
+    border-radius: 6px;
+    transition: width 0.4s ease-in-out;
+}
+
+/* Optional custom skill background colors */
+.skill-bar.html {
+    background-color: #f79c85; /* Light coral/orange */
+}
+
+.skill-bar.css {
+    background-color: #a3c9f9; /* Light blue */
+}
+
+.skill-bar.js {
+    background-color: #fff3a1; /* Soft yellow */
+}
+
+.skill-bar.angular {
+    background-color: #f8b3b3; /* Light red/pink */
+}
+
+.skill-bar.bootstrap {
+    background-color: #c9f2ff; /* Icy blue */
+}
+
+.skill-bar.python {
+    background-color: #b5d5f7; /* Pale blue */
+}
+
+.skill-bar.c {
+    background-color: #fff3a1; /* Soft yellow */
+}
+
+.skill-bar.sql {
+    background-color: #ffe0b2; /* Light orange/peach */
+}
+
+.skill-bar.fastapi {
+    background-color: #bdf3e1; /* Soft mint green */
+}
+
+.skill-bar.django {
+    background-color: #e7d5fc; /* Light violet */
+}
+
+.skill-bar.node {
+    background-color: #c0e6c4; /* Light green */
+}
+
+.skill-bar.rest {
+    background-color: #c9f2ff; /* Icy blue */
+}
+
+.skill-bar.mongo {
+    background-color: #d4f8d4; /* Light green */
+}
+
+.skill-bar.figma {
+    background-color: #e7d5fc; /* Light violet */
+}
+
+.skill-bar.adobe {
+    background-color:#d4f8d4; /* Light green */
+}
+
+.skill-bar.design {
+    background-color: #ffe7c6; /* Soft pastel orange */
+}
+  
+.tools-section {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.tools-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color, #333);
+}
+
+.tools-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.tool-tag {
+    padding: 0.6rem 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    background-color: #f7f7f7;
+    font-size: 0.9rem;
+    color: #333;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.tool-tag:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+

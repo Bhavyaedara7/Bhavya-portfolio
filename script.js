@@ -25,6 +25,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+window.addEventListener("scroll", () => {
+  const profileSection = document.getElementById("profile");
+  const sidebar = document.querySelector(".theme-sidebar");
+  const profileTop = profileSection.offsetTop;
+  const profileHeight = profileSection.offsetHeight;
+  const scrollY = window.scrollY;
+
+  if (scrollY >= profileTop && scrollY < profileTop + profileHeight) {
+    sidebar.classList.add("active");
+  } else {
+    sidebar.classList.remove("active");
+  }
+});
+
+
+
 // ✅ Scroll Reveal
 const scrollRevealOption = {
   distance: "50px",
@@ -58,6 +74,25 @@ document.querySelectorAll(".skill").forEach((skill) => {
   skill.addEventListener("mouseout", () => {
     skill.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
   });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const progressBars = document.querySelectorAll(".progress-bar > div");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const width = entry.target.getAttribute("style").match(/width:\s*(\d+)%/)[1];
+        entry.target.style.width = "0%";
+        setTimeout(() => {
+          entry.target.style.width = width + "%";
+        }, 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  progressBars.forEach(bar => observer.observe(bar));
 });
 
 

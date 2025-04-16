@@ -7,6 +7,7 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/skills.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" /> 
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <style data-href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"></style>
@@ -18,7 +19,7 @@
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#skills-section">skills-set</a></li>
+          <li><a href="#skills">skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -35,7 +36,7 @@
         </div>
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#skills-section" onclick="toggleMenu()">skills-set</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">skills</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
@@ -70,8 +71,8 @@
           </div>
     
           <div id="socials-container">
-            <img src="./assets/linkedin.png" alt="LinkedIn" class="icon" onclick="location.href='https://www.linkedin.com/in/bhavyaedara/'" />
-            <img src="./assets/github.png" alt="GitHub" class="icon" onclick="location.href='https://github.com/'" />
+            <a href="https://www.linkedin.com/in/bhavyaedara" target="_blank"><i class="devicon-linkedin-plain colored"></i></a>
+            <a href="#https://github.com/Bhavyaedara7/Bhavya-portfolio.git" target="_blank"><i class="devicon-github-original"></i></a>
           </div>
         </div>
         <div class="illustration-container">
@@ -100,7 +101,7 @@
                 class="icon"
               />
               <h3>Experience</h3>
-              <p>2 years <br />Python Developer</p>
+              <p>2+ years <br />Python Developer</p>
             </div>
             <div class="details-container">
               <img
@@ -126,101 +127,168 @@
       </div>
     </section>
 
-    <section id="skills-section">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
+
+    <section id="skills">
+      <h1 class="skills-title">Technical Skill Set</h1>
+      <div class="skills-grid">
     
-      <!-- Programming Languages & Tools -->
-      <div class="skills-group">
-        <h2 class="skills-subtitle">Frontend & Design</h2>
-        <div class="skills-container">
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-          </div><span>HTML5</span></div>
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
-          </div><span>CSS3</span></div>
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-          </div><span>JavaScript</span></div>
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg" />
-          </div><span>Angular</span></div>
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
-          </div><span>SQL</span></div>
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
-          </div><span>React</span></div>
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
-          </div><span>Figma</span></div>
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg" />
-          </div><span>Framer</span></div>
+        <!-- Frontend -->
+        <div class="skill-card">
+          <div class="skill-header">
+            <h2>Frontend Development</h2>
+            <div class="divider"></div>
+          </div>
+    
+          <div class="skill-item">
+            <div class="skill-title-percent">
+              <span class="skill-title">HTML / HTML5</span>
+              <span class="skill-percent">95%</span>
+            </div>
+            <div class="skill-bar html"><div class="bar-fill" style="width: 95%;"></div></div>
+          </div>
+    
+          <div class="skill-item">
+            <div class="skill-title-percent">
+              <span class="skill-title">CSS</span>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-bar css"><div class="bar-fill" style="width: 90%;"></div></div>
+          </div>
+    
+          <div class="skill-item">
+            <div class="skill-title-percent">
+              <span class="skill-title">JavaScript</span>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar js"><div class="bar-fill" style="width: 85%;"></div></div>
+          </div>
+    
+          <div class="skill-item">
+            <div class="skill-title-percent">
+              <span class="skill-title">Angular / React</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar angular"><div class="bar-fill" style="width: 80%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-title-percent">
+              <span class="skill-title">Bootstrap / jQuery</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar bootstrap"><div class="bar-fill" style="width: 80%;"></div></div>
+          </div>
+        </div>
+    
+        <!-- Backend -->
+        <div class="skill-card">
+          <div class="skill-header">
+            <h2>Backend Development</h2>
+            <div class="divider"></div>
+          </div>
+    
+          <div class="skill-item">
+            <div class="skill-title-percent">
+              <span class="skill-title">Python</span>
+              <span class="skill-percent">92%</span>
+            </div>
+            <div class="skill-bar python"><div class="bar-fill" style="width: 92%;"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-title-percent">
+              <span class="skill-title">C</span>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-bar c"><div class="bar-fill" style="width: 92%;"></div></div>
+          </div>
+    
+          <div class="skill-item">
+            <div class="skill-title-percent">
+              <span class="skill-title">Django / Flask</span>
+              <span class="skill-percent">88%</span>
+            </div>
+            <div class="skill-bar django"><div class="bar-fill" style="width: 88%;"></div></div>
+          </div>
+    
+          <div class="skill-item">
+            <div class="skill-title-percent">
+              <span class="skill-title">Node.js</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar node"><div class="bar-fill" style="width: 80%;"></div></div>
+          </div>
+    
+          <div class="skill-item">
+            <div class="skill-title-percent">
+              <span class="skill-title">MySQL / PostgreSQL</span>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar sql"><div class="bar-fill" style="width: 85%;"></div></div>
+          </div>
+        </div>
+    
+        <!-- Full Stack / Designing -->
+        <div class="skill-card">
+          <div class="skill-header">
+            <h2>Full Stack & Designing</h2>
+            <div class="divider"></div>
+          </div>
+    
+          <div class="skill-item">
+            <div class="skill-title-percent">
+              <span class="skill-title">REST APIs / JSON / AJAX</span>
+              <span class="skill-percent">88%</span>
+            </div>
+            <div class="skill-bar rest"><div class="bar-fill" style="width: 88%;"></div></div>
+          </div>
+    
+          <div class="skill-item">
+            <div class="skill-title-percent">
+              <span class="skill-title">Figma</span>
+              <span class="skill-percent">87%</span>
+            </div>
+            <div class="skill-bar figma"><div class="bar-fill" style="width: 82%;"></div></div>
+          </div>
+    
+          <div class="skill-item">
+            <div class="skill-title-percent">
+              <span class="skill-title">Adobe XD / AE</span>
+              <span class="skill-percent">82%</span>
+            </div>
+            <div class="skill-bar adobe"><div class="bar-fill" style="width: 85%;"></div></div>
+          </div>
+    
+          <div class="skill-item">
+            <div class="skill-title-percent">
+              <span class="skill-title">Wireframe / IA / Design System</span>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar design"><div class="bar-fill" style="width: 80%;"></div></div>
+          </div>
         </div>
       </div>
-    
-      <!-- Frameworks & Libraries -->
-      <div class="skills-group">
-        <h2 class="skills-subtitle">Backend & Databases</h2>
-        <div class="skills-container">
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
-          </div><span>Python</span></div>
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" />
-          </div><span>Django</span></div>
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" />
-          </div><span>Flask</span></div>
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
-          </div><span>Node.js</span></div>
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dynamodb/dynamodb-plain.svg" />
-          </div><span>DynamoDB</span></div>
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg" />
-          </div><span>jQuery</span></div>
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-plain.svg" />
-          </div><span>JSON</span></div>
+      <div class="tools-section">
+        <h3>Tools & Technologies</h3>
+        <div class="tools-container">
+          <span class="tool-tag">AWS</span>
+          <span class="tool-tag">Azure</span>
+          <span class="tool-tag">Docker</span>
+          <span class="tool-tag">Git</span>
+          <span class="tool-tag">GitHub</span>
+          <span class="tool-tag">VS Code</span>
+          <span class="tool-tag">PyCharm</span>
+          <span class="tool-tag">Jupyter Notebook</span>
+          <span class="tool-tag">Eclipse</span>
+          <span class="tool-tag">Spyder</span>
+          <span class="tool-tag">MongoDB</span>
+          <span class="tool-tag">Amazon DynamoDB</span>
+          <span class="tool-tag">Framer</span>
+          <span class="tool-tag">Adobe XD</span>
+          <span class="tool-tag">Interaction Design</span>
         </div>
       </div>
-    
-      <!-- Databases, IDEs & Design Tools -->
-      <div class="skills-group">
-        <h2 class="skills-subtitle">Full Stack & Dev Tools</h2>
-        <div class="skills-container">
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" />
-          </div><span>C</span></div>
-          <div class="skill"><div class="icon-container"><img src="icons/mysql.svg" alt="MySQL"></div><span>MySQL</span></div>         
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pycharm/pycharm-original.svg" />
-          </div><span>PyCharm</span></div>
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg" />
-          </div><span>Jupyter</span></div>
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original.svg" />
-          </div><span>Eclipse</span></div>
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
-          </div><span>AWS</span></div>
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
-          </div><span>GIT</span></div>
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spyder/spyder-original.svg" />
-          </div><span>Spyder</span></div>
-          <div class="skill"><div class="icon-container">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
-          </div><span>VS Code</span></div>
-        </div>
-      </div>
-    </section>        
+    </section>               
+
 
     <section id="projects">
       <div class="container">
@@ -228,29 +296,32 @@
         <h1 class="title">Projects</h1>
         <div class="work-list">
           <div class="work">
-            <img src="assets\projects\project-1.jpg" alt="Project Image">
+            <img src="assets\projects\arcade1.png" alt="Project Image">
             <div class="layer">
               <h3>PROJECT ONE</h3>
-              <p class="project-description">This is the project description that appears on hover.</p>
-              <a href="https://github.com/"  target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+              <p class="project-description">A web-based arcade platform featuring multiple classic mini-games with Firebase authentication and leaderboard integration.</p>
+              <a href="https://github.com/Bhavyaedara7/Arcade-Game.git"  target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
             </div>
           </div>
 
           <div class="work">
-            <img src="assets\projects\arcade1.png" alt="Project Image">
+            <img src="assets\projects\project-1.png" alt="Project Image">
             <div class="layer">
-              <h3>PROJECT ONE</h3>
-              <p class="project-description">This is the project description that appears on hover.</p>
-              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+              <h3>PROJECT TWO</h3>
+              <p class="project-description">A YouTube-inspired video platform prototype wireframed in Figma and developed using HTML & CSS to mimic the core layout and video browsing experience.</p>
+              <div class="project-links">
+                <a href="#https://www.figma.com/design/AkkAcp1ZnEHOLw8na6mPdw/Youtube-clone?node-id=0-1&t=3VMTifi7AcOlb6VG-1"  target="_blank"><i class="fa-solid fa-play"></i></a>
+                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+              </div> 
             </div>
           </div>
 
           <div class="work">
             <img src="assets\projects\project-3.png" alt="Project Image">
             <div class="layer">
-              <h3>PROJECT ONE</h3>
-              <p class="project-description">This is the project description that appears on hover.</p>
-              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+              <h3>PROJECT THREE</h3>
+              <p class="project-description">A modern, responsive restaurant website designed in Figma showcasing user-friendly navigation, rich visuals, and intuitive UX for food discovery and ordering.</p>
+              <a href="#https://www.figma.com/design/J9WpbPqrYxqWemCBPWGyqW/Sarigama?node-id=230-197&t=9zNxxIJSeho2TzBd-1"  target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
             </div>
           </div>
 
